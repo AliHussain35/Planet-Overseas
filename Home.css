@@ -1,0 +1,269 @@
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: rgb(5, 107, 142);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures wrapping for smaller screens */
+}
+
+.navbar .contact-info {
+    font-size: 14px;
+}
+
+.navbar-links ul {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.navbar-links a {
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+    color: #ffcc00;
+    text-shadow: 0px 0px 8px #ffcc00;
+    cursor: pointer;
+}
+
+/* Logo Section */
+.logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Enables wrapping on small screens */
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 4px solid #005580;
+}
+
+.logo-section .logo {
+    width: 150px; /* Adjusted for smaller screens */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-section .logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.company-name h1 {
+    color: #005580;
+    margin: 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center; /* Center-align on small screens */
+    transition: color 0.3s ease;
+}
+
+.company-name h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #0077aa;
+    font-style: italic;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+/* Main Content */
+.main-content {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h2 {
+    font-size: 28px;
+    color: #003366;
+}
+
+.main-content p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Footer */
+.footer {
+    background-color: rgb(5, 107, 142);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+/* About Section */
+.about-section {
+    position: relative;
+    background: url('bg.png') no-repeat center center/cover;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.about-section .container {
+    position: relative;
+    z-index: 2;
+    max-width: 90%; /* Adjusted for small screens */
+    margin: 0 auto;
+}
+
+.about-section h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+.about-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #f4f4f4;
+}
+
+/* Why Choose Section */
+.why-choose {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 40px 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.why-choose h2 {
+    font-size: 2rem;
+    color: #005580;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.choose-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Enable wrapping for responsiveness */
+}
+
+.choose-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 90%; /* Responsive width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.choose-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.choose-item img {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.choose-item h3 {
+    font-size: 1.2rem;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.choose-item p {
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Responsive Design Using Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .company-name h1 {
+        font-size: 1.8rem;
+    }
+
+    .choose-item {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content h2 {
+        font-size: 24px;
+    }
+
+    .main-content p {
+        font-size: 14px;
+    }
+
+    .choose-item img {
+        max-width: 150px;
+    }
+
+    .about-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-section p {
+        font-size: 0.9rem;
+    }
+}
